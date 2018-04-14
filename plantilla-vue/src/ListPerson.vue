@@ -14,7 +14,7 @@
 export default {
   data(){
     return{
-      title:'Actores',
+      title:'Pacientes',
       users:[]
     }
   },

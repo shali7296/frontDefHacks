@@ -1,10 +1,9 @@
 
+
 <template>
     <div id="app">
         <div><video ref="video" id="video" width="640" height="480" autoplay></video></div>
-        <a id="download">
-        <div><button  v-on:click="capture()">Snap Photo</button></div>
-        </a>
+        <div><button id="snap" v-on:click="capture()">Snap Photo</button></div>
         <canvas ref="canvas" id="canvas" width="640" height="480"></canvas>
         <ul>
             <li v-for="c in captures">
@@ -12,19 +11,20 @@
             </li>
         </ul>
     </div>
+
 </template>
 
 
 <script>
 
-var canvas = document.getElementById("miCanvas");
+
 
 function convertCanvasToImage(canvas) {
 	var image = new Image();
 	image.src = canvas.toDataURL("image/png");
 	return image;
 }
-  
+
     export default {
         name: 'app',
         data() {
@@ -46,17 +46,17 @@ function convertCanvasToImage(canvas) {
 
 
         methods: {
-            
-    capture() {
-        var filename = prompt("Guardar como...","Nombre del archivo");
-    
-        link = document.getElementById("download");
-        //Otros navegadores: Google chrome, Firefox etc...
-        link.href = canvas.toDataURL("image/png");// Extensión .png ("image/png") --- Extension .jpg ("image/jpeg")
-        link.download = filename;
 
-    }
-}
+          capture() {
+           this.canvas = this.$refs.canvas;
+           var context = this.canvas.getContext("2d").drawImage(this.video, 0, 0, 640, 480);
+           this.captures.push(canvas.toDataURL("image/png"));
+           var link = document.createElement('a');
+           link.download = "test.png";
+           link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+           link.click();
+          }
+        }
 
     }
 </script>

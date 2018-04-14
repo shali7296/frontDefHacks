@@ -1,9 +1,9 @@
 <template>
 <div class="center">
-  <h2>{{title}}</h2>
-    <img class="logo-big" src="./img/vue-logo.png" />
+  <h1>{{title}}</h1>
+    <img class="logo-big" src="./img/holi.png" size="100%"/>
     <p>
-      Plantilla hecha con Vue.js y Webpack
+      DefHacks
     </p>
 </div>
 </template>
@@ -11,7 +11,7 @@
 export default{
   data(){
     return{
-      title:'Index'
+      title:'TeamFace'
     }
   },
   mounted:function(){
@@ -19,3 +19,9 @@ export default{
   }
 }
 </script>
+
+<style>
+
+  background-image: './img/backgroung.jpg'
+
+</style>
