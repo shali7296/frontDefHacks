@@ -2,8 +2,10 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Index from './Index.vue';
 import ListPerson from './ListPerson.vue';
+import Hello from './Hello.vue';
 import VueResource from 'vue-resource';
 import InicioSesion from './InicioSesion.vue';
+
 require("./style.scss");
 
 import App from './App.vue';
@@ -12,7 +14,10 @@ Vue.use(VueResource);
 const routes = [
   { path: '/index', alias: '/', component: Index},
   { path:'/listPerson', component: ListPerson}, 
-  { path: '/inicioSesion', component: InicioSesion}
+  { path:'/hello', component: Hello},
+  { path: '/inicioSesion', component: InicioSesion},
+
+
 ]
 
 // Create the router instance and pass the `routes` option
