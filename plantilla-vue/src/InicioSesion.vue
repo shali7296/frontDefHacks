@@ -1,39 +1,52 @@
 <template>
+
 <div class= "center">
-<h2>Agregar Actores</h2>
+<modal name="hello-world">
+  hello, world!
+</modal>
+<h2>Iniciar Sesión</h2>
   <div class="emmm">
-      Nombre:
-      <input type = "text" v-model="Actor.firstName"><br><br>
-      Apellido:
-      <input type = "text" v-model ="Actor.lastName"><br>
-      <br>
-      <button v-on:click="holaa">Registrar</button>
+        NombreUsuario: 
+         <input type = "text" v-model="User.username"><br><br> 
+       Contraseña:        
+         <input type = "text" v-model ="User.password"><br>
+         <br>          
+      <button v-on:click="holaa">Ingresar</button>
   </div>
 </div>
+
 
 </template>
 
 <script>
+
 export default {
   data(){
     return{
-      Actor: {
-        firstName:'',
-        lastName: ''
+      User: {
+        username:'',
+        password: ''
       },
       alert: 'Holaa'
     }
   },
   methods: {
+    show () {
+      this.$modal.show('hello-world');
+    },
+    hide () {
+      this.$modal.hide('hello-world');
+    },
     holaa:function(){
-      if(this.Actor.firstName == ''){
+      if(this.User.username == ''){
+        this.$modal.show('hello-world', { foo: 'bar' })
       }
       else{
-        if(this.Actor.lastName == ''){
+        if(this.User.password == ''){
 
         }
         else{
-        this.$http.post('http://localhost:8081/sakila-spring-backend/actors/', this.Actor)
+        this.$http.post('http://localhost:8081/sakila-spring-backend/Actors/', this.User)
         }
       }
     }

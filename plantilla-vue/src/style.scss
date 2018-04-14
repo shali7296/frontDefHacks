@@ -16,18 +16,20 @@ html {
 }
 
 body {
+
   color:$secondary-color;
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  background-image: !important '/home/shalini/Escritorio/frontDefHacks/plantilla-vue/src/img/backgroung.jpg'
 }
 
 header{
 
   padding: 10px 20px;
-  background-color: lighten(#efefef, 3%);
+  background-color: lighten(#ffffff, 3%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,7 +58,7 @@ header{
           left: 0px;
           width: 100%;
           height: 3px;
-          background-color: $main-color;
+          background-color: #000000;
 
       }
     }
