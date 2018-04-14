@@ -4,6 +4,9 @@ import Index from './Index.vue';
 import ListPerson from './ListPerson.vue';
 import VueResource from 'vue-resource';
 import InicioSesion from './InicioSesion.vue';
+import VModal from 'vue-js-modal'
+
+Vue.use(VModal)
 require("./style.scss");
 
 import App from './App.vue';

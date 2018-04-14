@@ -7,17 +7,15 @@
       </div>
       <nav>
         <a href="#/">Home</a>
-        <a href="#/listPerson">Listado Actores</a>
-        <a href="#/inicioSesion">Agregar Actores</a>
+        <a href="#/listPerson">Lista</a>
+        <a href="#/inicioSesion">Iniciar Sesión</a>
       </nav>
     </header>
 
     <main class="container">
       <router-view></router-view>
     </main>
-    <footer>
-      Footer
-    </footer>
+   
 </div>
 </template>
 
