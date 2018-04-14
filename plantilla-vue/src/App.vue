@@ -7,8 +7,8 @@
       </div>
       <nav>
         <a href="#/">Home</a>
-        <a href="#/actors">Listado Actores</a>
-        <a href="#/postactors">Agregar Actores</a>
+        <a href="#/listPerson">Listado Actores</a>
+        <a href="#/inicioSesion">Agregar Actores</a>
       </nav>
     </header>
 
